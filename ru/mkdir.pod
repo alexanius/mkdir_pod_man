@@ -1,0 +1,75 @@
+=encoding utf-8
+
+=head1 NAME
+
+mkdir - создаёт директории
+
+=head1 SYNOPSIS
+
+B<mkdir> [F<OPTION>]... F<DIRECTORY>...
+
+=head1 DESCRIPTION
+
+Создаёт ДИРЕКТОРИЮ(и), если они уже не существуют.
+
+Обязательныйе аргументы к длинным опциям также обязательны и к коротким.
+
+=over 7
+
+=item B<-m>, B<--mode>=F<MODE>
+
+установить опции файла (как в chmod), не=rwx - размаскировка
+
+=item B<-p>, B<--parents>
+
+не выдаёт ошибок в случае существования, создаёт родительские директории
+
+=item B<-v>, B<--verbose>
+
+печатает сообщение для каждой выводимой директории
+
+=item B<-z>, B<--context>=F<CTX>
+
+устанавливает контекст безопасности SELinux каждой созданной директории в значение CTX
+
+=item B<--help> напечатать это сообщение о помощи и выйти
+
+=item B<--version>
+
+вывести информацию о версии и выйти
+
+=back
+
+=head1 AUTHOR
+
+Написано David MacKenzie.
+
+=head1 REPORTING BUGS
+
+Сообщайте об ошибках в L<bug-coreutils@gnu.org>
+
+Домашняя страница GNU coreutils: L<http://www.gnu.org/software/coreutils/>
+
+Общая помощь по использованию GNU программ: L<http://www.gnu.org/gethelp/>
+
+Сообщайте об ошибках в переводе mkdir в L<http://translationproject.org/team/>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2012 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later L<http://gnu.org/licenses/gpl.html>.
+
+Это свободное программное обеспечение: Вы можете менять и распространять его. Для этого НЕТ ОГРАНИЧЕНИЙ предусмотренных законом.
+
+=head1 SEE ALSO
+
+mkdir(2)
+
+Полная документацию для B<mkdir> разработана в Texinfo мануале. Если B<info> и B<mkdir> программы установлены у вас, введите команду
+
+=over 7
+
+=item C<info coreutils 'mkdir invocation'>
+
+=back
+
+должно дать доступ к полному мануалу

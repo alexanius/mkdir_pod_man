@@ -4,10 +4,28 @@ To compile the POD file exec:
 
 	$ pod2man -c "User commands" -n mkdir -s 1 -r "GNU coreutils 8.17" en/mkdir.pod > en/mkdir.1
 
-and to watch it
+and to watch it:
 
 	$ nroff -Tutf8 -mandoc en/mkdir.1 | less
 
 also you can make a pdf file with the command
 
 	$ groff -Tps -mandoc en/mkdir.1 > en/mkdir.ps && ps2pdf en/mkdir.ps en/mkdir.pdf && rm en/mkdir.ps
+
+
+
+
+If you are working with russian translation of manual you should act in the following way:
+
+	$ pod2man --utf8 -c "User commands" -n mkdir -s 1 -r "GNU coreutils 8.17" ru/mkdir.pod > ru/mkdir.1
+
+and to watch it:
+
+	$ groff -Dutf8 -Tutf8 -mandoc ru/mkdir.1 | less
+
+to create pdf you can try
+
+	$ groff -Dutf8 -Tps -mandoc ru/mkdir.1 > ru/mkdir.ps && ps2pdf ru/mkdir.ps ru/mkdir.pdf && rm ru/mkdir.ps
+
+but on my computer than does not work. If you solve this problem, please contact me <alexanius@gmail.com>
+
