@@ -1,0 +1,13 @@
+This is an example of simple man page, written with perl POD
+
+To compile the POD file exec:
+
+	$ pod2man -c "User commands" -n mkdir -s 1 -r "GNU coreutils 8.17" en/mkdir.pod > en/mkdir.1
+
+and to watch it
+
+	$ nroff -Tutf8 -mandoc en/mkdir.1 | less
+
+also you can make a pdf file with the command
+
+	$ groff -Tps -mandoc en/mkdir.1 > en/mkdir.ps && ps2pdf en/mkdir.ps en/mkdir.pdf && rm en/mkdir.ps

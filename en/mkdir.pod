@@ -1,0 +1,73 @@
+=encoding utf-8
+
+=head1 NAME
+
+mkdir - make directories
+
+=head1 SYNOPSIS
+
+B<mkdir> [F<OPTION>]... F<DIRECTORY>...
+
+=head1 DESCRIPTION
+
+Create the DIRECTORY(ies), if they do not already exist.
+
+Mandatory arguments to long options are mandatory for short options too.
+
+=over 7
+
+=item B<-m>, B<--mode>=F<MODE>
+
+set file mode (as in chmod), not a=rwx - umask
+
+=item B<-p>, B<--parents>
+
+no error if existing, make parent directories as needed
+
+=item B<-v>, B<--verbose>
+
+print a message for each created directory
+
+=item B<-z>, B<--context>=F<CTX>
+
+set the SELinux security context of each created directory to CTX
+
+=item B<--help> display this help and exit
+
+=item B<--version> output version information and exit
+
+=back
+
+=head1 AUTHOR
+
+Written by David MacKenzie.
+
+=head1 REPORTING BUGS
+
+Report mkdir bugs to L<bug-coreutils@gnu.org>
+
+GNU coreutils home page: L<http://www.gnu.org/software/coreutils/>
+
+General help using GNU software: L<http://www.gnu.org/gethelp/>
+
+Report mkdir translation bugs to L<http://translationproject.org/team/>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2012 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later L<http://gnu.org/licenses/gpl.html>.
+
+This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
+
+=head1 SEE ALSO
+
+mkdir(2)
+
+The full documentation for B<mkdir> is maintained as a Texinfo manual. If the B<info> and B<mkdir> programs are properly installed at your site, the command
+
+=over 7
+
+=item C<info coreutils 'mkdir invocation'>
+
+=back
+
+should give you access to the complete manual.
